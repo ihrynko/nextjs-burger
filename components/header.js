@@ -1,24 +1,20 @@
 import Link from "next/link";
-import { GiHamburger } from "react-icons/si";
+import { GiHamburger } from "react-icons/gi";
 
-const Header = (
-  <header>
-    <div>
-      <GiHamburger />
-    </div>
-    <nav>
-      <a href="/">Home</a>
-      <Link href="/about">
-        <a>About us</a>
-      </Link>
-      <Link href="/reviews">
-        <a>Reviews</a>
-      </Link>
-      <Link href="/burgers">
-        <a>Burgers</a>
-      </Link>
-    </nav>
-  </header>
-);
+const Header = () => {
+  return (
+    <header>
+      <div>
+        <GiHamburger />
+      </div>
+      <nav>
+        <Link href="/">Home</Link>
+        <Link href="/about">About us</Link>
+        <Link href="/reviews">Reviews</Link>
+        <Link href="/burgers">Burgers</Link>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

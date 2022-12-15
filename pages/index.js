@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <Header />
-      {/* <h1>Welcome to Burger Shop</h1> */}
-      {/* <Footer /> */}
+      <h1>Welcome to Burger Shop</h1>
+      <Footer />
     </div>
   );
 }
