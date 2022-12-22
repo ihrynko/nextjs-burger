@@ -1,20 +1,6 @@
-import { useState, useEffect } from "react";
 import Head from "next/head";
 
-export default function Reviews() {
-  const [reviews, setReviews] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/comments"
-      );
-      const data = await response.json();
-      setReviews(data);
-    };
-    getData();
-  }, []);
-
+export default function Reviews({ reviews }) {
   return (
     <>
       <Head>
@@ -36,4 +22,14 @@ export default function Reviews() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/comments");
+  const data = await response.json();
+  return {
+    props: {
+      reviews: data.slice(0, 20),
+    },
+  };
 }
