@@ -6,21 +6,21 @@
       "desc":
         "Classic 100% beef steak burger with pickled cucumbers and fresh wheat bun.",
       "price": 28,
-      "id": 1
+      "id": "001"
     },
     {
       "name": "Chiken Burger",
       "image": "/images/chicken.jpeg",
       "desc": "Chicken burger topped with melted cheese, BBQ sauce and lettuce.",
       "price": 67,
-      "id": 2
+      "id": "002"
     },
     {
       "name": "Double Hamburger",
       "image": "/images/double.jpeg",
       "desc": "Double hamburger with 100% beef steak and melted cheddar cheese and spicy sauce.",
       "price": 59,
-      "id": 3
+      "id": "003"
     }
   ]
 }
