@@ -8,13 +8,13 @@ export default function Reviews({ reviews }) {
         <meta name="title" content="Fat Burgers" />
       </Head>
       <div>
-        <h1>Reviews</h1>
+        <h1>Отзывы клиентов</h1>
         <div className="reviews">
           {reviews.length &&
-            reviews.slice(0, 20).map((review) => {
+            reviews.map((res) => {
               return (
-                <div key={review.id} className="review">
-                  {review.id}) {review.body.slice(0, 90)}...
+                <div key={res.id} className="review">
+                  {res.id}) {`${res.body.slice(0, 90)}...`}
                 </div>
               );
             })}
@@ -24,9 +24,10 @@ export default function Reviews({ reviews }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   const response = await fetch("https://jsonplaceholder.typicode.com/comments");
   const data = await response.json();
+
   return {
     props: {
       reviews: data.slice(0, 20),

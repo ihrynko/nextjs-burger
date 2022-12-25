@@ -12,6 +12,7 @@
     "build-api": "concurrently \"npm run build\" \"npm run json-server\""
   },
   "dependencies": {
+    "axios": "^1.2.1",
     "concurrently": "^7.6.0",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
