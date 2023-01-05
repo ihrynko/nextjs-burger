@@ -4,7 +4,7 @@ export default function About() {
       <h1>About us</h1>
       <div>
         <p>
-          There's fast food, and then there's us. We are driven by an urge to
+          There is fast food, and then there is us. We are driven by an urge to
           show that fast food can be made better. We take great care in quality
           and finding the right raw materials. This means that we can not only
           serve a meal that tastes better, but also feels better. Our
